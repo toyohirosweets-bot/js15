@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ねこ</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="screen">
+    <div id="sun">
+      <img src="./img/sun.png" width="1259" height="1259" alt="太陽">
+    </div>
+    <div id="cat1">
+      <img src="./img/onecat.png" width="1600" height="1200" alt="ぶち猫">
+    </div>
+    <div id="hirameki">
+      <img src="./img/hirameki.png" width="1600" height="1200" alt="ひらめき猫">
+    </div>
+    <div id="mount">
+      <img src="./img/mount.png" width="4000" height="2800" alt="山">
+    </div>
+    <div id="pick">
+      <img src="./img/twocatsryuck.png" width="1600" height="1200" alt="リュック猫">
+    </div>
+    <div id="green">
+      <img src="./img/green.png" width="1600" height="1200" alt="はらっぱ">
+    </div>
+    <div id="oni">
+      <img src="./img/twocats.png" width="1600" height="1200" alt="おにぎり食べる猫">
+    </div>
+    <div id="chou">
+      <img src="./img/chou.png" width="5000" height="3750" alt="ちょうちょ">
+    </div>
+    <div id="mogu">
+      <img src="./img/mogu.png" width="1600" height="1200" alt="もぐら">
+    </div>
+     <div id="mogu2">
+      <img src="./img/mogu.png" width="1600" height="1200" alt="もぐら">
+    </div>
+     <div id="mogu3">
+      <img src="./img/mogu.png" width="1600" height="1200" alt="もぐら">
+    </div>
+     <div id="mogu4">
+      <img src="./img/mogu.png" width="1600" height="1200" alt="もぐら">
+    </div>
+    <div id="heart">
+      <img src="./img/heart.png" width="660" height="598" alt="ハート">
+    </div>
+    <div id="chu">
+      <img src="./img/chu.png" width="2600" height="1700" alt="ねずみ">
+    </div>
+  </div>
+  <script src="./jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      $('#sun').click(function () {
+        // ボタン
+        $('#sun').fadeOut(1500)
+          .queue(function () {
+            $("#cat1").fadeIn(2000).dequeue()
+              .delay(5000)
+              .fadeOut(1000)
+            $("#hirameki")
+              .delay(3000)
+              .fadeIn(1000)
+              .delay(1000)
+              .fadeOut(1000)
+            $("#mount")
+              .delay(6000)
+              .fadeIn(1000)
+            $("#pick")
+              .delay(7000)
+              .fadeIn(1000)
+              .animate({ top: 200 })
+              .animate({ top: 150, left: 600 })
+              .animate({ top: 100, left: 550 })
+              .animate({ top: 50, left: 500 })
+              .animate({ top: 10, left: 450 })
+              .fadeOut(1000)
+            $("#mount")
+              .delay(3000)
+              .fadeOut(1000)
+            $(".screen")
+              .css("background-color", "#fff")
+            $("#green")
+              .delay(11300)
+              .fadeIn(1000)
+              .delay(8500)
+              .fadeOut(1000)
+            $("#oni")
+              .delay(11500)
+              .fadeIn(1000)
+              .animate({ left: 375 },1400)
+              .animate({ left: 350 },1500)
+              .animate({ left: 375 },1500)
+              .animate({ left: 350 },1500)
+              .animate({ left: 375 },1400)
+              .fadeOut(1000)
+              $("#chou")
+              .delay(11800)
+              .fadeIn(1000)
+              .animate({ left: 300 ,top: 100},1000)
+              .animate({ left: 383 ,top: 50},1000)
+              .animate({ left: 466 ,top: 100},1000)
+              .animate({ left: 549 ,top: 50},1000)
+              .animate({ left: 635,top: 100},1000)
+              .animate({ left: 715 ,top: 50},1000)
+              .animate({ left: 800 ,top: 100},1000)
+              .fadeOut(1000)
+              $("#mogu")
+              .delay(12000)
+              .fadeIn(100)
+              .delay(1200)
+              .fadeOut(100)
+               $("#mogu2")
+              .delay(14400)
+              .fadeIn(100)
+              .delay(1200)
+              .fadeOut(100)
+              $("#mogu3")
+              .delay(16500)
+              .fadeIn(100)
+              .delay(1200)
+              .fadeOut(100)
+              $("#mogu4")
+              .delay(18500)
+              .fadeIn(100)
+              .delay(1200)
+              .fadeOut(1000)
+            $("#heart")
+              .delay(23000)
+              .fadeIn(1000)
+              .delay(2000)
+              .fadeOut(1000)
+            $("#chu")
+              .delay(24000)
+              .fadeIn(1000)
+              .fadeOut(1800)
+            $('body')
+              .delay(28000)
+              .queue(function () {
+                $('body').html('fin.');
+
+                $('body').css({
+                  fontSize: '100px',
+                  textAlign: 'center',
+                  paddingTop: '250px',
+
+                });
+
+                $('body').dequeue();
+              });
+          })
+
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>
